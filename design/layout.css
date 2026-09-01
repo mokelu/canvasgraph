@@ -1,0 +1,48 @@
+:root {
+  --dock-width: 48px;
+  --sidebar-width: 200px;
+  --topbar-height: 36px;
+  --bottombar-height: 28px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: var(--dock-width) var(--sidebar-width) 1fr var(--sidebar-width) var(--dock-width);
+  grid-template-rows: var(--topbar-height) 1fr var(--bottombar-height);
+  grid-template-areas:
+    "top       top          top          top         top"
+    "left-dock left-content center       right-content right-dock"
+    "bottom    bottom       bottom       bottom      bottom";
+  font-family: var(--font-family);
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: var(--dock-width) 1fr var(--dock-width);
+    grid-template-areas:
+      "top       top       top"
+      "left-dock center    right-dock"
+      "bottom    bottom    bottom";
+  }
+  .left-content, .right-content { display: none; }
+}
+
+@media (max-width: 640px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "top"
+      "center"
+      "bottom";
+  }
+}
+/* The element with the class top belongs in the grid area called top.*/
+/* The rest follow in simple english */
+.top { grid-area: top; }
+.left-dock { grid-area: left-dock; }
+.left-content { grid-area: left-content; }
+.center { grid-area: center; }
+.right-content { grid-area: right-content; }
+.right-dock { grid-area: right-dock; }
+.bottom { grid-area: bottom; }

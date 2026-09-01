@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 — 2026-09-01
+
+* Made layout responsive with media queries.
+* Added tablet breakpoint (≤1024px) — hides sidebars.
+* Added mobile breakpoint (≤640px) — hides docks.
+* Moved responsive behavior into components (RightDock, LeftDock).
+
 ## 1.0.1 — 2026-08-31
 
 * Created `index.html`.

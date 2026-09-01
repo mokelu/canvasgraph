@@ -2,7 +2,7 @@
 
 **Demo URL:** https://fairy.riemannresearch.com
 
-Fairy is a **framework-agnostic, modern, general-purpose computational notebook and IDE**.
+Fairy is a **modern, general-purpose computational notebook and IDE**.
 
 Think **VS Code**, except the center of the workspace can be almost anything: a chart, Kanban board, notebook, code editor, Markdown editor, spreadsheet, app, calendar, document editor, game, or anything else you can imagine.
 
