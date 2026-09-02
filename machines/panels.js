@@ -13,3 +13,4 @@ export const panels = reactive({
     active: 'center'
   }
 })
+

@@ -1,0 +1,8 @@
+<template>
+  <svg viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+    <rect x="1" y="1" width="10" height="30" fill="var(--bg-primary)" stroke="var(--text-primary)" stroke-width="1"/>
+    <rect x="13" y="1" width="10" height="30" fill="var(--bg-primary)" stroke="var(--text-primary)" stroke-width="1"/>
+    <rect x="25" y="1" width="10" height="30" fill="var(--bg-primary)" stroke="var(--text-primary)" stroke-width="1"/>
+    <rect x="37" y="1" width="10" height="30" fill="var(--bg-primary)" stroke="var(--text-primary)" stroke-width="1"/>
+  </svg>
+</template>

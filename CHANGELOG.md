@@ -6,6 +6,8 @@
 * Added tablet breakpoint (≤1024px) — hides sidebars.
 * Added mobile breakpoint (≤640px) — hides docks.
 * Moved responsive behavior into components (RightDock, LeftDock).
+* Renamed `state/` folder to `machines/`.
+* Renamed `state` variable in controlplane to `machines`.
 
 ## 1.0.1 — 2026-08-31
 

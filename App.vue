@@ -23,13 +23,13 @@
 </template>
 
 <script setup>
-import TopBar from './components/TopBar.vue'
-import BottomBar from './components/BottomBar.vue'
-import LeftDock from './components/LeftDock.vue'
-import LeftContent from './components/LeftContent.vue'
-import CenterContent from './components/CenterContent.vue'
-import RightContent from './components/RightContent.vue'
-import RightDock from './components/RightDock.vue'
+import TopBar from './components/layout/TopBar.vue'
+import BottomBar from './components/layout/BottomBar.vue'
+import LeftDock from './components/layout/LeftDock.vue'
+import LeftContent from './components/layout/LeftContent.vue'
+import CenterContent from './components/layout/CenterContent.vue'
+import RightContent from './components/layout/RightContent.vue'
+import RightDock from './components/layout/RightDock.vue'
 </script>
 
 <style>

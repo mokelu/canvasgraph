@@ -1,22 +1,22 @@
 <template>
-  <div class="left-dock">
+  <div class="right-dock">
     <span
-      v-for="icon in leftIcons"
+      v-for="icon in rightIcons"
       :key="icon.id"
       class="icon"
-      :class="{ active: panels.left.activeIcon === icon.id }"
-      @click="panels.left.activeIcon = icon.id"
+      :class="{ active: panels.right.activeIcon === icon.id }"
+      @click="panels.right.activeIcon = icon.id"
     >{{ icon.symbol }}</span>
   </div>
 </template>
 
 <script setup>
-import { panels } from '../state/panels.js'
-import { leftIcons } from '../state/icons.js'
+import { panels } from '../../machines/panels.js'
+import { rightIcons } from '../../machines/icons.js'
 </script>
 
 <style scoped>
-.left-dock {
+.right-dock {
   background: var(--bg-secondary);
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@ import { leftIcons } from '../state/icons.js'
   padding-top: var(--spacing-md);
   gap: var(--spacing-sm);
   width: var(--dock-width);
-  border-right: var(--border-width) solid var(--border-color);
+  border-left: var(--border-width) solid var(--border-color);
 }
 
 .icon {
@@ -42,7 +42,7 @@ import { leftIcons } from '../state/icons.js'
 }
 
 @media (max-width: 640px) {
-  .left-dock {
+  .right-dock {
     display: none;
   }
 }

@@ -2,13 +2,13 @@
 
 **Demo URL:** https://fairy.riemannresearch.com
 
-Fairy is a **modern, general-purpose computational notebook and IDE**.
+Fairy is a **framework-agnostic, modern, general-purpose computational notebook and IDE**.
 
 Think **VS Code**, except the center of the workspace can be almost anything: a chart, Kanban board, notebook, code editor, Markdown editor, spreadsheet, app, calendar, document editor, game, or anything else you can imagine.
 
-Fairy does not prescribe a particular interface, library, workflow, or way of working. There is **nothing fixed**. You are free to choose what belongs in your workspace, how it behaves, and which technologies you want to use.
+Fairy does not prescribe a particular interface, library, workflow, or way of working. There is **nothing fixed**. You are free to choose what belongs in your workspace, how it behaves, and which technologies you want to use. Fairy supports: React, Vue, Angular, Vanilla JS, Simple Html, etc, you name it, fairy supports it.
 
-Fairy supports a wide range of libraries and technologies, allowing you to create and combine different kinds of experiences **immediately and without friction**.
+Fairy also supports a wide range of libraries and technologies, allowing you to create and combine different kinds of experiences **immediately and without friction**.
 
 Explore the App Store to discover the libraries and capabilities available:
 

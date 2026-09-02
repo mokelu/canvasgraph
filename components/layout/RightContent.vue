@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-import { panels } from '../state/panels.js'
+import { panels } from '../../machines/panels.js'
 </script>
 
 <style scoped>
