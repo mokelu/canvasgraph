@@ -1,0 +1,13 @@
+{
+  "id": "chart",
+  "name": "Candlestick Chart",
+  "version": "1.0.0",
+  "description": "Interactive candlestick chart with zoom and pan",
+  "type": "app",
+  "provides": ["chart"],
+  "requires": [
+    { "name": "d3", "url": "https://esm.sh/d3@7" },
+    { "name": "pixi", "url": "https://esm.sh/pixi.js@7" }
+  ],
+  "main": "index.js"
+}

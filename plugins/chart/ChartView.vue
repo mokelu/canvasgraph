@@ -4,6 +4,8 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import * as PIXI from 'https://esm.sh/pixi.js@7'
+import * as d3 from 'https://esm.sh/d3@7'
 
 const container = ref(null)
 
@@ -24,22 +26,7 @@ const data = [
 
 let app = null
 
-function loadScript(url) {
-  return new Promise((resolve, reject) => {
-    const s = document.createElement('script')
-    s.src = url
-    s.onload = resolve
-    s.onerror = reject
-    document.head.appendChild(s)
-  })
-}
-
 onMounted(async () => {
-  await loadScript('https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.2/pixi.min.js')
-  await loadScript('https://d3js.org/d3.v7.min.js')
-  const PIXI = window.PIXI
-  const d3 = window.d3
-
   const margin = { top: 10, right: 10, bottom: 20, left: 30 }
   const width = container.value.clientWidth - margin.left - margin.right
   const height = container.value.clientHeight - margin.top - margin.bottom

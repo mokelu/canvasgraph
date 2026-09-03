@@ -1,0 +1,10 @@
+{
+  "id": "markdown",
+  "name": "Markdown Editor",
+  "version": "1.0.0",
+  "description": "Write and preview markdown content",
+  "type": "app",
+  "provides": ["markdown"],
+  "requires": [],
+  "main": "index.js"
+}

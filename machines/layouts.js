@@ -3,7 +3,7 @@ export const layouts = {
     {
       id: '1-a',
       label: 'Single',
-      tree: { direction: 'horizontal', children: [{ content: 'chart' }] }
+      tree: { direction: 'horizontal', children: [{}] }
     }
   ],
   2: [
@@ -12,7 +12,7 @@ export const layouts = {
       label: 'Side by side',
       tree: {
         direction: 'horizontal',
-        children: [{ content: 'chart' }, { content: 'chart' }]
+        children: [{}, {}]
       }
     },
     {
@@ -20,7 +20,7 @@ export const layouts = {
       label: 'Stacked',
       tree: {
         direction: 'vertical',
-        children: [{ content: 'chart' }, { content: 'chart' }]
+        children: [{}, {}]
       }
     }
   ],
@@ -30,11 +30,7 @@ export const layouts = {
       label: 'Three columns',
       tree: {
         direction: 'horizontal',
-        children: [
-          { content: 'chart' },
-          { content: 'chart' },
-          { content: 'chart' }
-        ]
+        children: [{}, {}, {}]
       }
     },
     {
@@ -43,10 +39,10 @@ export const layouts = {
       tree: {
         direction: 'horizontal',
         children: [
-          { content: 'chart' },
+          {},
           {
             direction: 'vertical',
-            children: [{ content: 'chart' }, { content: 'chart' }]
+            children: [{}, {}]
           }
         ]
       }
@@ -59,9 +55,9 @@ export const layouts = {
         children: [
           {
             direction: 'vertical',
-            children: [{ content: 'chart' }, { content: 'chart' }]
+            children: [{}, {}]
           },
-          { content: 'chart' }
+          {}
         ]
       }
     }
@@ -75,11 +71,11 @@ export const layouts = {
         children: [
           {
             direction: 'horizontal',
-            children: [{ content: 'chart' }, { content: 'chart' }]
+            children: [{}, {}]
           },
           {
             direction: 'horizontal',
-            children: [{ content: 'chart' }, { content: 'chart' }]
+            children: [{}, {}]
           }
         ]
       }
@@ -89,12 +85,7 @@ export const layouts = {
       label: 'Four columns',
       tree: {
         direction: 'horizontal',
-        children: [
-          { content: 'chart' },
-          { content: 'chart' },
-          { content: 'chart' },
-          { content: 'chart' }
-        ]
+        children: [{}, {}, {}, {}]
       }
     },
     {
@@ -103,14 +94,10 @@ export const layouts = {
       tree: {
         direction: 'horizontal',
         children: [
-          { content: 'chart' },
+          {},
           {
             direction: 'vertical',
-            children: [
-              { content: 'chart' },
-              { content: 'chart' },
-              { content: 'chart' }
-            ]
+            children: [{}, {}, {}]
           }
         ]
       }
@@ -123,13 +110,9 @@ export const layouts = {
         children: [
           {
             direction: 'vertical',
-            children: [
-              { content: 'chart' },
-              { content: 'chart' },
-              { content: 'chart' }
-            ]
+            children: [{}, {}, {}]
           },
-          { content: 'chart' }
+          {}
         ]
       }
     }

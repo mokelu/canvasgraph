@@ -2,12 +2,12 @@
   <div class="pane" :class="pane.direction || 'horizontal'">
     <template v-if="pane.children">
       <template v-for="(child, i) in pane.children" :key="i">
-        <Pane :pane="child" />
+        <Pane :pane="child" :path="path + '-' + i" />
         <div v-if="i < pane.children.length - 1" class="divider" :class="pane.direction"></div>
       </template>
     </template>
     <template v-else>
-      <PaneContent :content="pane.content" />
+      <PaneContent :path="path" />
     </template>
   </div>
 </template>
@@ -16,7 +16,8 @@
 import PaneContent from './PaneContent.vue'
 
 defineProps({
-  pane: Object
+  pane: Object,
+  path: { type: String, default: '0' }
 })
 </script>
 

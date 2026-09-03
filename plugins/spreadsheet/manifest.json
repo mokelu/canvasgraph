@@ -1,0 +1,10 @@
+{
+  "id": "spreadsheet",
+  "name": "Spreadsheet",
+  "version": "1.0.0",
+  "description": "Data grid for viewing and editing tabular data",
+  "type": "app",
+  "provides": ["spreadsheet"],
+  "requires": [],
+  "main": "index.js"
+}

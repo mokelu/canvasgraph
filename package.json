@@ -8,10 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "d3": "^7.9.0",
+    "pixi.js": "^7.4.2",
+    "splitpanes": "^4.1.2",
     "vue": "^3.5.42"
   },
   "devDependencies": {
-    "vite": "^8.2.2",
-    "@vitejs/plugin-vue": "^6.0.8"
+    "@vitejs/plugin-vue": "^6.0.8",
+    "vite": "^8.2.2"
   }
 }

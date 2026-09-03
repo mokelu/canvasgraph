@@ -62,6 +62,7 @@ function getPreview(count, layoutId) {
 function select(count, layoutId) {
   panes.count = count
   panes.layoutId = layoutId
+  panes.content = {}
   open.value = false
 }
 </script>
