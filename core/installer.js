@@ -1,11 +1,8 @@
 import { loadPlugin, unloadPlugin } from './plugin-loader.js'
+import { pluginStorage } from './storage/plugin.js'
 
-function getInstalledIds() {
-  return JSON.parse(localStorage.getItem('installedPlugins') ?? '[]')
-}
-
-function setInstalledIds(ids) {
-  localStorage.setItem('installedPlugins', JSON.stringify(ids))
+export async function getInstalledPlugins() {
+  return await pluginStorage.getAll()
 }
 
 export async function installPlugin(catalogEntry) {
@@ -16,24 +13,19 @@ export async function installPlugin(catalogEntry) {
   await writeFiles(targetDir, files)
   await loadPlugin(catalogEntry.id)
 
-  const installed = getInstalledIds()
-  if (!installed.includes(catalogEntry.id)) {
-    installed.push(catalogEntry.id)
-    setInstalledIds(installed)
-  }
+  await pluginStorage.add({ id: catalogEntry.id, version: catalogEntry.version })
 }
 
 export async function uninstallPlugin(pluginId) {
   await unloadPlugin(pluginId)
   await deleteFiles(`plugins/${pluginId}/`)
 
-  const installed = getInstalledIds()
-  setInstalledIds(installed.filter(id => id !== pluginId))
+  await pluginStorage.remove(pluginId)
 }
 
 export async function reinstallBuiltIns(builtInIds) {
-  const installed = getInstalledIds()
-  return [...new Set([...builtInIds, ...installed])]
+  const installed = await pluginStorage.getAll()
+  return [...new Set([...builtInIds, ...installed.map(p => p.id)])]
 }
 
 async function unzip(blob) {

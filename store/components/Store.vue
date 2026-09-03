@@ -59,17 +59,21 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { catalog } from '../catalog.js'
 import { installPlugin, uninstallPlugin } from '../../core/installer.js'
+import { pluginStorage } from '../../core/storage/plugin.js'
 import StoreCard from './StoreCard.vue'
 import StoreDetail from './StoreDetail.vue'
 
 const search = ref('')
 const selectedItem = ref(null)
-const installedIds = ref(new Set(
-  JSON.parse(localStorage.getItem('installedPlugins') ?? '[]')
-))
+const installedIds = ref(new Set())
+
+onMounted(async () => {
+  const plugins = await pluginStorage.getAll()
+  installedIds.value = new Set(plugins.map(p => p.id))
+})
 
 function isInstalled(id) {
   const entry = catalog.find(c => c.id === id)
