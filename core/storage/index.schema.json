@@ -1,0 +1,76 @@
+[
+  {
+    "id": "a533d55c-da15-478b-9d86-703bb69056d6",
+    "name": "hasElectronBridge",
+    "type": "variable",
+    "description": "Variable hasElectronBridge declared in storage",
+    "inputs": [
+      {
+        "name": "hasElectronBridge",
+        "type": "constant"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "hasElectronBridge",
+        "type": "constant"
+      }
+    ],
+    "dependencies": [],
+    "metadata": {},
+    "initialValue": "typeof window !== 'undefined' && !!window.fairyStorage",
+    "mutations": []
+  },
+  {
+    "id": "9f00c0e8-d380-4368-ba21-b5cfb54a28f6",
+    "name": "storage",
+    "type": "variable",
+    "description": "Variable storage declared in storage",
+    "inputs": [
+      {
+        "name": "storage",
+        "type": "variable"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "storage",
+        "type": "variable"
+      }
+    ],
+    "dependencies": [],
+    "metadata": {},
+    "mutations": []
+  },
+  {
+    "id": "6205bd5d-f94c-418b-a4a6-ae1a1d204359",
+    "name": "decision-2",
+    "type": "decision",
+    "description": "Environment-based storage selection",
+    "inputs": [
+      {
+        "name": "condition",
+        "type": "boolean"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "selectedBranch",
+        "type": "string"
+      }
+    ],
+    "dependencies": [],
+    "metadata": {},
+    "condition": "hasElectronBridge",
+    "branches": [
+      {
+        "label": "if",
+        "code": "{\n  storage = window.fairyStorage;\n}"
+      },
+      {
+        "label": "else",
+        "code": "{\n  const {\n    storage: browserStorage\n  } = await import('./browser.js');\n  storage = browserStorage;\n}"
+      }
+    ]
+  }
+]
